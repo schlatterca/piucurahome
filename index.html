@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>+cura</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=-1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!--<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+
+  <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#678fa6">
+  <meta name="theme-color" content="#ffffff">-->
+
+  <script language="javascript" type="text/javascript" src="js/hovering.js"></script>
+</head>
+
+
+<!-- INIZIO BODY -->
+
+<body>
+
+	<img src="img/img_1.jpg" alt="prima immagine" style="z-index: -1">
+
+	<div id="div1">
+		<img src="img/logo.png" alt="logo" style="width: 28vw; min-width: 130px;">
+		<p class="text_1">Clinica specialistica<br>Monfalcone (GO) Via Roma, 39</p>
+	</div>
+	<div id="div2">
+		<div class="map" style="width: 100%; height: 100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Roma%2039,%20Monfalcone%20(GO)+(+CURA)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+	</div>
+	<div id="div3">
+		<p class="text_1" style= "margin-right: 14vw">Daniela Paoli<br>&nbsp;</p>
+		<p class="text_1" style= "margin-right: 6vw">T <a style="margin-left:9px">0481.412705</a><br>M <a href="mailto:michelin.leonardo@gmail.com" style="margin-left:7px">paoli@spin.it</a></p>
+		<p class="text_1">F <a style="margin-left:7px">0481.2631188</a><br>&nbsp;</p>
+
+		<p class="text_2">Riceve su appuntamento<br>Dal lunedì al venerdì <br>dalle 9:00 alle 18:00<br><br><br><br><br><br>Num exerumendae optati duci temossi sae plita dene consed et a cusdae moditasim aut autem. Et aut apicipissi consedit qui doluptatem et velique as exerit lab is aut res et ipsanihitia nis earupti conse nonse ped magniminvero imoles volenditam dit ea cus ma est, optium quaesci amusande velesci duciat. Met arum volorit apelessi sandi odi inctur, suntis ex esed qui diorem aut et il eniatur, earcias mi, aut est vid molupis volorum, solestis et mos aut ium volorporio tecta distio es sima doloreperunt magnimet quat. Arum doluptatetur adi ute eos estem fuga. Nam sus peri debiscil eosam aperchi lluptat.</p>
+	</div>
+	<div id="div4">
+		<p class="text_1" style= "margin-right: 14vw">Leonardo Michelin<br>&nbsp;</p>
+		<p class="text_1">T <a style="margin-left:9px">340.7449044</a><br>M <a href="mailto:michelin.leonardo@gmail.com" style="margin-left:7px">michelin.leonardo@gmail.com</a></p>
+
+		<p class="text_2">Riceve su appuntamento<br>Dal lunedì al venerdì <br>dalle 9:00 alle 18:00<br><br><br><br><br><br>Num exerumendae optati duci temossi sae plita dene consed et a cusdae moditasim aut autem. Et aut apicipissi consedit qui doluptatem et velique as exerit lab is aut res et ipsanihitia nis earupti conse nonse ped magniminvero imoles volenditam dit ea cus ma est, optium quaesci amusande velesci duciat. Met arum volorit apelessi sandi odi inctur, suntis ex esed qui diorem aut et il eniatur, earcias mi, aut est vid molupis volorum, solestis et mos aut ium volorporio tecta distio es sima doloreperunt magnimet quat. Arum doluptatetur adi ute eos estem fuga. Nam sus peri debiscil eosam aperchi lluptat.</p>
+	</div>
+
+	<!--SCRIPT-->
+	<script>
+		var div2 = document.getElementById('div2');
+		var map = document.getElementsByClassName('map')[0];
+
+		div2.addEventListener("mouseover", function(){
+		    console.log("enter");
+		    map.style.opacity = "1";
+		});
+		div2.addEventListener("mouseout", function(){
+		    console.log("out");
+		    map.style.opacity = "0";
+		});
+
+		//
+		var div3 = document.getElementById('div3');
+		var text3 = document.getElementsByClassName('text_2')[0];
+
+		div3.addEventListener("mouseover", function(){
+		    console.log("enter");
+		    div3.style.paddingBottom = "42vh";
+		    div3.style.backgroundColor = "rgb(0,150,75)";
+		    text3.style.opacity = "1";
+		});
+		div3.addEventListener("mouseout", function(){
+		    console.log("out");
+		    div3.style.paddingBottom = "6px";
+		    div3.style.backgroundColor = "transparent";
+		    text3.style.opacity = "0";
+		});
+
+		//
+		var div4 = document.getElementById('div4');
+		var text4 = document.getElementsByClassName('text_2')[1];
+
+		div4.addEventListener("mouseover", function(){
+		    console.log("enter");
+		    div4.style.paddingBottom = "42vh";
+		    div4.style.backgroundColor = "rgb(0,150,75)";
+		    text4.style.opacity = "1";
+		});
+		div4.addEventListener("mouseout", function(){
+		    console.log("out");
+		    div4.style.paddingBottom = "6px";
+		    div4.style.backgroundColor = "transparent";
+		    text4.style.opacity = "0";
+
+		});
+	</script>
+
+</html>
