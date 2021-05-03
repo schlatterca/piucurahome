@@ -23,23 +23,6 @@ html, body{
   overflow: hidden;
 }
 
-a:link {
-  color: white;
-  text-decoration: none;
-}
-a:visited {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-a:active {
-  color: white;
-  text-decoration: none;
-}
-
 @keyframes move {
   0%   {padding-bottom: 6px}
   100%   {padding-bottom: 42vh}
@@ -47,77 +30,233 @@ a:active {
 
 div { width: 50%; height: 50%; float: left; }
 
-#div1{ 
-  background: none;
-  border: 3.5px solid rgb(0,150,75);
-  border-style: none solid solid none;
-  padding: 12px;
-  padding-bottom: 6px;
-
-  display: flex;
-}
-#div2{ 
-  background: none;
-  border: 3.5px solid rgb(0,150,75);
-  border-style: none none solid solid;
-}
-#div3{ 
-  background: none;
-  background-color: none;
-  border: 3.5px solid rgb(0,150,75);
-  border-style: solid solid none none;
-  padding: 12px;
-  padding-bottom: 6px;
-
-  display: flex;
-
-  transition: background-color 1s, padding-bottom 1s;
-}
-#div4{ 
-  background: none;
-  background-color: none;
-  border: 3.5px solid rgb(0,150,75);
-  border-style: solid none none solid;
-  padding: 12px;
-  padding-bottom: 6px;
-
-  display: flex;
-
-  transition: background-color 1s, padding-bottom 1s;
-}
-
-.text_1{
-  color: white;
-  font-family: 'HelveticaNow', Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 1vw;
-  line-height: 1.1vw; /*was 12/13 */
-  letter-spacing: 0.07em;
-
-  display: inline-block;
-  align-self: flex-end;
-}
-
-.text_2{
-  color: white;
-  font-family: 'HelveticaNow', Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 1vw;
-  line-height: 1.1vw; /*was 12/13 */
-  letter-spacing: 0.07em;
-
-  position: absolute;
-  width: 48vw;
-  bottom:0;
-  opacity: 0;
-  transition: opacity 1s;
-
-  display: inline-block;
-  align-self: flex-end;
-  pointer-events:none;
-}
-
 .map{
   opacity: 0;
   transition: opacity 1s;
+}
+
+.hidden{
+  display: none!important;
+}
+
+#infoPage_1{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  margin: 0;
+  background-color: white;
+  z-index: 2;
+}
+#infoPage_2{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  margin: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo_1{
+    width: 28vw;
+    min-width: 130px;
+    z-index: 1;
+  }
+  .logo_2{
+    display: none;
+  }
+
+  .text_1_a, .text_1_b{
+    color: white;
+    font-family: 'HelveticaNow', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 1.1vw; /*was 12/13 */
+    letter-spacing: 0.07em;
+
+    display: inline-block;
+    align-self: flex-end;
+  }
+
+  .text_2{
+    color: white;
+    font-family: 'HelveticaNow', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 1.1vw; /*was 12/13 */
+    letter-spacing: 0.07em;
+
+    position: absolute;
+    width: 48vw;
+    bottom:0;
+    opacity: 0;
+    transition: opacity 1s;
+
+    display: inline-block;
+    align-self: flex-end;
+    pointer-events:none;
+  }
+
+  #div1{ 
+    background: none;
+    border: 3.5px solid rgb(0,150,75);
+    border-style: none solid solid none;
+    padding: 12px;
+    padding-bottom: 6px;
+
+    display: flex;
+  }
+  #div2{ 
+    background: none;
+    border: 3.5px solid rgb(0,150,75);
+    border-style: none none solid solid;
+  }
+  #div3{ 
+    background: none;
+    background-color: none;
+    border: 3.5px solid rgb(0,150,75);
+    border-style: solid solid none none;
+    padding: 12px;
+    padding-bottom: 6px;
+
+    display: flex;
+
+    transition: background-color 1s, padding-bottom 1s;
+  }
+  #div4{ 
+    background: none;
+    background-color: none;
+    border: 3.5px solid rgb(0,150,75);
+    border-style: solid none none solid;
+    padding: 12px;
+    padding-bottom: 6px;
+
+    display: flex;
+
+    transition: background-color 1s, padding-bottom 1s;
+  }
+}
+
+@media (max-width: 768px) {
+  a:link {
+    color: black;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  a:active {
+    color: black;
+    text-decoration: none;
+  }
+
+  .logo_1{
+    display: none;
+  }
+  .logo_2{
+    padding: 0px;
+    width: 100%;
+    min-width: 100px;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .text_1_a{
+    color: black;
+    font-family: 'HelveticaNow', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  .text_1_b{
+    color: black;
+    font-family: 'HelveticaNow', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+
+    display: inline-block;
+    align-self: flex-end;
+  }
+
+  .text_2{
+    color: black;
+    font-family: 'HelveticaNow', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+
+    position: absolute;
+    width: 94vw;
+    bottom:0;
+    opacity: 0;
+    transition: opacity 1s;
+
+    display: inline-block;
+    align-self: flex-end;
+    pointer-events:none;
+  }
+
+  #div1{
+    display: none;
+  }
+  #div2{ 
+    display: none;
+  }
+  #div3{
+    width: 100vw;
+
+    background: none;
+    background-color: none;
+    border: 3.5px solid rgb(20,20,20);
+    border-style: none;
+    padding: 12px;
+    padding-bottom: 6px;
+
+    display: flex;
+    transition: background-color 1s, padding-bottom 1s;
+  }
+  #div4{
+    width: 100vw;
+
+    background: none;
+    background-color: none;
+    border: 3.5px solid rgb(20,20,20);
+    border-style: none;
+    padding: 12px;
+    padding-bottom: 6px;
+
+    display: flex;
+    transition: background-color 1s, padding-bottom 1s;
+  }
 }
