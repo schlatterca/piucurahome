@@ -26,14 +26,14 @@
 <body onresize="checkSize()">
 
 	<div id="infoPage_1" class="hidden">
-		<!--img src="img/x.png" alt="prima immagine" style="width:15px; height:15px; min-width:15px; margin-right: 12px; margin-top: 24px; position: relative; float: right" onclick="openInfo_1()">
-		<p class="text_1_a" style="margin-left:12px; margin-top:24px; position: absolute">+CURA. Clinica specialistica<br>Monfalcone (GO) Via Roma, 39<br>&nbsp;</p-->
+		<div style="pointer-events: none; width: 100%;height: 50vh;border-bottom: 6px solid black;position: fixed;"></div>
+		<div style="pointer-events: none; width: 100%;height: 0%;border-bottom: 6px solid black;position: fixed;margin-top:50vh;transform: rotate(90deg)"></div>
+
+		<img src="img/x.png" alt="prima immagine" style="width:15px; height:15px; min-width:15px; margin-right: 12px; margin-top: 24px; position: relative; float: right" onclick="openInfo_1()">
+		<p class="text_1_a" style="margin-left:12px; margin-top:24px; position: absolute">+CURA. Clinica specialistica<br>Monfalcone (GO) Via Roma, 39<br>&nbsp;</p>
 
 		<p class="text_1_a" style="margin-left:12px; margin-top:51vh; position: absolute">Daniela Paoli<br>&nbsp;<br><a href='tel:0481412705'>0481.412705</a><br><a target='_blank' href='mailto: paoli@spin.it'>paoli@spin.it</a><br>FAX&nbsp;&nbsp;&nbsp;0481.2631188<br>&nbsp;<br>Riceve su appuntamento<br>Dal lunedì al venerdì<br>dalle 09:00 alle 18:00</p>
 		<p class="text_2" style="opacity: 1; margin-left: 12px">Num exerumendae optati duci temossi sae plita dene consed et a cusdae moditasim aut autem. Et aut apicipissi consedit qui doluptatem et velique as exerit lab is aut res et ipsanihitia nis earupti conse nonse ped magniminvero imoles volenditam dit ea cus ma est, optium quaesci amusande velesci duciat. Met arum volorit apelessi sandi odi inctur, suntis ex esed qui diorem aut et il eniatur, earcias mi, aut est vid molupis volorum, solestis et mos aut ium volorporio tecta distio es sima doloreperunt magnimet quat. Arum doluptatetur adi ute eos estem fuga. Nam sus peri debiscil eosam aperchi lluptat.</p>
-
-		<div style="pointer-events: none; width: 100%;height: 50vh;border-bottom: 6px solid black;position: fixed;"></div>
-		<div style="pointer-events: none; width: 100%;height: 0%;border-bottom: 6px solid black;position: fixed;margin-top:50vh;transform: rotate(90deg)"></div>
 
 	</div>
 	<div id="infoPage_2" class="hidden">
@@ -62,11 +62,12 @@
 		<div class="map" style="width: 100%; height: 100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Roma%2039,%20Monfalcone%20(GO)+(+CURA)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
 	</div>
 	<div id="div3" onclick="openInfo_1()">
-		<p class="text_1_a" style= "margin-right: 14vw">Daniela Paoli<br>&nbsp;</p>
-		<p class="text_1_a" style= "margin-right: 6vw">T <a style="margin-left:9px" href='tel:0481412705'>0481.412705</a><br>M <a target='_blank' href='mailto: paoli@spin.it' style="margin-left:7px">paoli@spin.it</a></p>
-		<p class="text_1_a">F <a style="margin-left:7px">0481.2631188</a><br>&nbsp;</p>
+		<p class="text_1_a" style= "z-index: 1; margin-right: 14vw;" onclick="null">Daniela Paoli<br>&nbsp;</p>
+		<p class="text_1_a" style= "z-index: 1; margin-right: 6vw" onclick="null">T <a style="margin-left:9px" href='tel:0481412705'>0481.412705</a><br>M <a target='_blank' href='mailto: paoli@spin.it' style="margin-left:7px">paoli@spin.it</a></p>
+		<p class="text_1_a" style="z-index: 1; margin-left:7px" onclick="null">F <a>0481.2631188</a><br>&nbsp;</p>
 
 		<p class="text_2">Riceve su appuntamento<br>Dal lunedì al venerdì <br>dalle 9:00 alle 18:00<br><br><br><br><br><br>Num exerumendae optati duci temossi sae plita dene consed et a cusdae moditasim aut autem. Et aut apicipissi consedit qui doluptatem et velique as exerit lab is aut res et ipsanihitia nis earupti conse nonse ped magniminvero imoles volenditam dit ea cus ma est, optium quaesci amusande velesci duciat. Met arum volorit apelessi sandi odi inctur, suntis ex esed qui diorem aut et il eniatur, earcias mi, aut est vid molupis volorum, solestis et mos aut ium volorporio tecta distio es sima doloreperunt magnimet quat. Arum doluptatetur adi ute eos estem fuga. Nam sus peri debiscil eosam aperchi lluptat.</p>
+		<!--div onclick="openInfo_1()" style="z-index: 0; background-color: red; width: 100%; height: 50%; position: fixed; margin: -12px;"></div-->
 	</div>
 	<div id="div4" onclick="openInfo_2()">
 		<p class="text_1_b" style= "margin-right: 14vw">Leonardo Michelin<br>&nbsp;</p>
@@ -94,7 +95,7 @@
 		});
 		//
 		var div3 = document.getElementById('div3');
-		var text3 = document.getElementsByClassName('text_2')[0];
+		var text3 = document.getElementsByClassName('text_2')[2];
 
 		div3.addEventListener("mouseover", function(){
 			if (window.innerWidth > 768) {
@@ -112,7 +113,7 @@
 		});
 		//
 		var div4 = document.getElementById('div4');
-		var text4 = document.getElementsByClassName('text_2')[1];
+		var text4 = document.getElementsByClassName('text_2')[3];
 
 		div4.addEventListener("mouseover", function(){
 			if (window.innerWidth > 768) {
